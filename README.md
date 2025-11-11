@@ -8,3 +8,63 @@ Features:
 - Prompts the user before closing, keeping the final message on screen.
 - Easy to customize with your own messages and typing speed.
 - Perfect for beginners learning Python, experimenting with loops, or creating small interactive text-based projects.
+
+# Explanation
+
+  1. Pause before execution
+input("Press enter to execute")
+
+The program waits for the user to press Enter before continuing.
+
+This is just a simple way to give the user control over when the program starts.
+
+2. Importing modules
+import time
+import sys
+time → lets you pause the program for a specific amount of time.
+sys → allows you to control how text is printed to the screen, giving more control than the normal print() function.
+
+3. Set the text to display
+text = ("hello world!" 
+"this is my first programme")
+
+- text is a variable that stores a string.
+
+Python automatically joins strings that are next to each other, so this is the same as:
+
+- text = "hello world!this is my first programme"
+
+4. Print text one character at a time
+for char in text:
+    sys.stdout.write(char)
+    sys.stdout.flush()
+    time.sleep(0.1)
+for char in text: → loops through each character in the text, one by one.
+sys.stdout.write(char) → prints the character without moving to a new line.
+sys.stdout.flush() → makes sure the character shows immediately.
+time.sleep(0.1) → pauses for 0.1 seconds before printing the next character.
+
+- The result: the text appears like it’s being typed out slowly, like a typewriter effect.
+
+5. Print a new line
+print()
+
+- Moves the cursor to a new line after printing all the text.
+
+6. Repeat the typing effect with another message
+text = ("Press enter to close")
+for char in text:
+    sys.stdout.write(char)
+    sys.stdout.flush()
+    time.sleep(0.1)
+print ()
+
+- Same typing effect as before, but this time it shows “Press enter to close” on the screen.
+
+7. Wait for the user to close
+input()
+
+- The program pauses and waits for the user to press Enter.
+
+This keeps the window open instead of instantly closing, so you can read the final message before the program ends.
+
